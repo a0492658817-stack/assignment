@@ -61,5 +61,7 @@ def main():
             sum+=balls[j]+balls[j+1]
             #normal
             j+=2
+    print(sum)
 main()
 """
+
