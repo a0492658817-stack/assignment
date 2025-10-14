@@ -67,7 +67,7 @@ def advice(totalpoint,color):
     rank_order = {'Spade': 4, 'Heart': 3, 'Diamond': 2, 'Club': 1}
     max_suit = max(['Spade','Heart','Diamond','Club'], key=lambda s: (suit_counts[s], rank_order[s]))
     if(totalpoint<8):
-        return "pass"
+        return "Pass"
     elif(totalpoint<15):
         return f"Open {max_suit}"
     else:
@@ -75,7 +75,7 @@ def advice(totalpoint,color):
 def main():
     color,number=INPUT() 
     HCP=FIND_HCP(number)
-    LPS,LPH,LPD,LPC,LP,=FIND_LP_CARD_amount(color)
+    LPS,LPH,LPD,LPC,LP=FIND_LP_CARD_amount(color)
     totalpoint=HCP+LP
     SA=[]
     SA=Stopper_Analysis(color,number)
@@ -85,5 +85,4 @@ def main():
     print(f"Distribution (S-H-D-C): {LPS}-{LPH}-{LPD}-{LPC}")
     print(f"Stopped Suits: {SA}")
     print(f"Opening Bid: {Adivce}")
-
 main()
