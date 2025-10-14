@@ -83,6 +83,7 @@ def main():
     print("HCP:",HCP)
     print("Total Points:",totalpoint)
     print(f"Distribution (S-H-D-C): {LPS}-{LPH}-{LPD}-{LPC}")
-    print(f"Stopped Suits:{SA}")
+    print(f"Stopped Suits: {SA}")
     print(f"Opening Bid: {Adivce}")
+
 main()
